@@ -1,0 +1,22 @@
+{
+  "name": "design-system",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/design-system/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/design-system",
+        "main": "libs/design-system/src/index.ts",
+        "tsConfig": "libs/design-system/tsconfig.lib.json",
+        "assets": [],
+        "project": "libs/design-system/package.json",
+        "compiler": "swc",
+        "format": ["cjs", "esm"]
+      }
+    }
+  }
+}

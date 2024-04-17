@@ -1,0 +1,19 @@
+{
+  "name": "dashboard",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "dashboard/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/dashboard",
+        "main": "dashboard/src/index.ts",
+        "tsConfig": "dashboard/tsconfig.lib.json",
+        "assets": ["dashboard/*.md"]
+      }
+    }
+  }
+}
